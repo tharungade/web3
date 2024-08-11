@@ -23,9 +23,10 @@ function getRandomString(): string {
     return returnStr;
 }
 
+let prefix = "100xdevs"
 while(true)
 {
-    let input = getRandomString();
+    let input = prefix + getRandomString();
     if(hashFunction(input)?.startsWith("00000"))
     {
         console.log("Found input:", input);
